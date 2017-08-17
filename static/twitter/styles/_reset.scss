@@ -1,0 +1,54 @@
+* {
+  font-family: 'Open sans', sans-serif;
+  box-sizing: border-box;
+  outline: 0;
+}
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* stylelint-disable */
+.noscroll {
+  margin: 0;
+  height: 100%;
+  overflow: hidden;
+
+  #header-produto .floating-bar,
+  .regua-edicao {
+    width: calc(100% - 15px);
+  }
+}
+
+#header-produto.header-navegacao .floating-bar {
+  z-index: 99999;
+}
+
+#glb-cabecalho {
+  position: relative;
+}
+
+/* stylelint-enable */
+
+.footer.product-color > .row,
+.row.bloco-wide {
+  margin: 0 auto;
+}
+.nav-ge-tabs{
+  margin-bottom: 15px;
+}
+
+#myTab{
+   border-bottom: 1px solid #ddd;
+}
+.nav{
+  padding-left:0;
+  list-style: none;
+}

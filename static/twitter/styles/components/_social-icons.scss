@@ -1,0 +1,62 @@
+.social-icons {
+  text-align: right;
+  margin: 10px auto;
+  float: right;
+  position: relative;
+  width: auto;
+
+  @include fontSize(18px);
+
+  .social-container {
+    display: inline-block;
+    max-width: 150px;
+    width: 100%;
+  }
+
+  &-icon {
+    margin: 10px 3px;
+    width: 32px;
+    height: 32px;
+    display: inline-block;
+    vertical-align: middle;
+    transition: opacity 0.3s;
+    opacity: 1;
+
+    &:hover {
+      opacity: 0.7;
+    }
+
+    &.icon-facebook {
+      color: $social-facebook;
+    }
+
+    &.icon-twitter {
+      color: $social-twitter;
+    }
+
+    &.icon-whatsapp {
+      color: $social-whatsapp;
+      margin-right: 20px;
+      display: none;
+    }
+  }
+
+  @include mq($until: tablet) {
+    display: inline-block;
+    left: auto;
+    margin: 20px auto 0;
+    max-width: 100%;
+    position: relative;
+    text-align: center;
+    top: -10px;
+    transform: translate(0);
+    width: 100%;
+    float: none;
+
+    &-icon {
+      &.icon-whatsapp {
+        display: inline-block;
+      }
+    }
+  }
+}

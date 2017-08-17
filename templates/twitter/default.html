@@ -1,0 +1,47 @@
+{% if dev %}
+    {% load render_bundle from webpack_loader %}
+{% endif %}
+
+{% load i18n %}
+
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+{% include 'twitter/head.html' %}
+
+<body>
+	<!-- TODO Descomentar a publicidade principal -->
+    <!--
+    {#{{cabecalho|safe}}#}
+	<div class='row bloco-wide'>
+        <div class="small-12 medium-12 large-12 columns">
+            <div class="publicidade publicidade-banner_slb_topo">
+                <div id="banner_slb_topo" class="tag-manager-publicidade-container">
+
+                </div>
+            </div>
+        </div>
+    </div>
+    -->
+
+<!-- Conteúdo Começa -->
+{% language 'pt-br' %}
+{% block content %}
+{% endblock %}
+{% endlanguage %}
+{% if dev %}
+<!-- Conteúdo Termina -->
+    {% render_bundle 'main' %}
+{% endif %}
+
+<!-- TODO Descomentar analytics -->
+{# <script src="https://www.google-analytics.com/analytics.js"></script> #}
+
+</body>
+</html>
